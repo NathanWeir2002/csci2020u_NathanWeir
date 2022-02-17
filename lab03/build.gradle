@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+// mainClassName = 'SimpleTest'
+mainClassName = 'csci2020u.lab02.CSVDemo'
+version = '1.0'
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+	implementation 'org.apache.commons:commons-csv:1.9.0'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName,
+        	    'Implementation-Title': 'Lab03',
+        	    'Implementation-Version': version
+    }
+}
